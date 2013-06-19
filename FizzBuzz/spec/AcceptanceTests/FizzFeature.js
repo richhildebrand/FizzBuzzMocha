@@ -5,8 +5,12 @@ describe("Acceptance Tests - Fizz Feature", function() {
 	describe("Given a number divisible by three getSentence", function() {
 		it("should return Fizz", function() {
 			var fizzBuzz = new FizzBuzz();
-			var returnedSentence = fizzBuzz.getSentence(3);
-			chai.expect(returnedSentence).to.contain("Fizz");
+			var numbersDivisibleByThree = [3, 6, 9, 12, 15, 30, 102, 300]
+
+			numbersDivisibleByThree.forEach(function(input) {
+				var returnedSentence = fizzBuzz.getSentence(input);
+				chai.expect(returnedSentence).to.contain("Fizz");
+			});
 		});
 	});
 
