@@ -1,0 +1,31 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Mocha Tests</title>
+  <link rel="stylesheet" href="../../lib/mocha.css" />
+  <script src="../../lib/jquery.min.js"></script>
+  <script src="../../lib/chai.js"></script>
+  <script src="../../lib/mocha.js"></script>
+  <script>mocha.setup('bdd')</script>
+
+
+
+  <!-- include code files here -->
+  <script src="../src/FizzBuzz.js"></script>
+
+  <!-- include spec files here -->
+  <script src="AcceptanceTests/FizzFeature.js"></script>
+
+
+
+
+  <script>
+    $(function() {
+      mocha.run();
+    })
+  </script>
+</head>
+<body>
+  <div id="mocha"></div>
+</body>
+</html>
