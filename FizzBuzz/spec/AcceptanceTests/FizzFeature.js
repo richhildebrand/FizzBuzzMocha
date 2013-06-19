@@ -24,7 +24,7 @@ describe("Acceptance Tests - Fizz Feature", function() {
 	describe("Given a number not divisible by three getSentence", function() {
 		it("should not return Fizz", function() {
 			var fizzBuzz = new FizzBuzz();
-			var returnedSentence = fizzBuzz.getSentence(3);
+			var returnedSentence = fizzBuzz.getSentence(4);
 			chai.expect(returnedSentence).to.not.contain("Fizz");
 		});
 	});
