@@ -37,4 +37,17 @@ describe("Acceptance Tests - Fizz Feature", function() {
 		});
 	});
 
+	//Is this an appropriate next test in this style?
+	describe("Given a number divisible by five getSentence", function() {
+		it("should return Buzz", function() {
+			var fizzBuzz = new FizzBuzz();
+			var numbersDivisibleByFive = [5, 10, 15, 50, 100, 200, 300];
+
+			numbersDivisibleByFive.forEach(function(input) {
+				var returnedSentence = fizzBuzz.getSentence(input);
+				chai.expect(returnedSentence).to.contain("Buzz");
+			});
+		});
+	});
+
 });
