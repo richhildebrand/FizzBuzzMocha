@@ -17,4 +17,16 @@ describe("Acceptance Tests - Input Feature", function() {
 			});
 		});
 	});
+
+	describe("Given a number divisible by three or five getSentence", function() {
+		it("should not return the input value", function() {
+			var numbersNotDivisibleByThreeOrFive = [3, 5, 15, 18, 30, 600];
+
+			numbersNotDivisibleByThreeOrFive.forEach(function(input) {
+				var returnedSentence = _fizzBuzz.getSentence(input);
+				chai.expect(returnedSentence).to.not.contain(input);
+			});
+		});
+	});
+
 });
