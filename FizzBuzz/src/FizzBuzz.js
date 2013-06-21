@@ -10,7 +10,7 @@ var FizzBuzz = function() {
         if (input % 5 === 0) {
             sentence += "Buzz";
         }
-        return sentence;
+        return (sentence) ? sentence : input.toString();
 	}
 
 	return {
