@@ -20,7 +20,7 @@ describe("Acceptance Tests - Fizz Feature", function() {
 
 	describe("Given a number not divisible by three, nor containing a three, getSentence", function() {
 		it("should not return Fizz", function() {
-			var numbersNotDivisibleByThree = [4, 5, 7, 8, 10, 23, 100];
+			var numbersNotDivisibleByThree = [4, 5, 7, 8, 10, 25, 100];
 
 			numbersNotDivisibleByThree.forEach(function(input) {
 				var returnedSentence = _fizzBuzz.getSentence(input);

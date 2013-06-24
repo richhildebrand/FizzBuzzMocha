@@ -4,7 +4,13 @@ var FizzBuzz = function() {
 	
     var getSentence = function (input) {
     	var sentence = "";
-        if (input % 3 === 0) {
+        var inputToString = input.toString();
+        var inputCharArray = inputToString.split('');
+        var inputCharArrayContainsThree = (inputCharArray.indexOf("3") > -1);
+
+
+
+        if (input % 3 === 0 || inputCharArrayContainsThree) {
             sentence = "Fizz";
         }
         if (input % 5 === 0) {

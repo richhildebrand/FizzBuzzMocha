@@ -18,9 +18,10 @@ describe("Acceptance Tests - FizzBuzz Feature", function() {
 		});
 	});
 
-	describe("Given a number not divisible by three or five getSentence", function() {
+	//I changed the name of this (added the "nor containing a three") which I believe is correct here?
+	describe("Given a number not divisible by three or five getSentence, nor containing a three", function() {
 		it("should return FizzBuzz", function() {
-			var numbersNotDivisibleByThreeAndFive = [6, 20, 35, 50];
+			var numbersNotDivisibleByThreeAndFive = [6, 20, 55, 50];
 
 			numbersNotDivisibleByThreeAndFive.forEach(function(input) {
 				var returnedSentence = _fizzBuzz.getSentence(input);
