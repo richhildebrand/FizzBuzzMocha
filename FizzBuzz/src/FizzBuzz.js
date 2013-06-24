@@ -2,6 +2,23 @@
 
 var FizzBuzz = function() {
 	
+    var Calculator = function(input) {
+
+        var isDivisibleByThree = function(input) {
+            return (input % 3) === 0;
+        }
+
+        var isDivisibleByFive = function(input) {
+            return (input % 5) === 0;
+        }
+
+        return { 
+            isDivisibleByThree: isDivisibleByThree,
+            isDivisibleByFive : isDivisibleByFive
+        }
+    };
+
+
     var getSentence = function (input) {
     	var sentence = "";
         var inputToString = input.toString();
@@ -12,16 +29,20 @@ var FizzBuzz = function() {
             return (input.toString().indexOf("5") != -1);
         }
 
-        if (input % 3 === 0 || inputCharArrayContainsThree) {
+        var calculator = new Calculator();
+
+
+        if ( calculator.isDivisibleByThree(input) || inputCharArrayContainsThree) {
             sentence = "Fizz";
         }
-        if (input % 5 === 0 || containsFive(input)) {
+        if ( calculator.isDivisibleByFive(input) || containsFive(input)) {
             sentence += "Buzz";
         }
         return (sentence) ? sentence : input.toString();
 	}
 
 	return {
-		getSentence : getSentence
+		getSentence : getSentence,
+        Calculator : Calculator
 	}
 }
