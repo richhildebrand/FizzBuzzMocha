@@ -18,9 +18,9 @@ describe("Acceptance Tests - Buzz Feature", function() {
 		});
 	});
 
-	describe("Give a number not divisible by five getSentence", function() {
+	describe("Give a number not divisible by five, nor containing five, getSentence", function() {
 		it("should not return Buzz", function() {
-			var numbersNotDivisibleByFive = [7, 23, 52, 78, 109]
+			var numbersNotDivisibleByFive = [7, 23, 62, 78, 109]
 
 			numbersNotDivisibleByFive.forEach(function(input) {
 				var returnedSentence = _fizzBuzz.getSentence(input);
