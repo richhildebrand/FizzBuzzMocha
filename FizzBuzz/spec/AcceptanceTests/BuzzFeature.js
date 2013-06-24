@@ -29,4 +29,14 @@ describe("Acceptance Tests - Buzz Feature", function() {
 		});
 	});
 
+	describe("Given a number that contains a five, getSentence", function() {
+		it("should return Buzz", function() {
+			var numbersContainingAFive = [5, 15, 55, 45, 513, 1035];
+
+			numbersContainingAFive.forEach(function(input) {
+				var returnedSentence = _fizzBuzz.getSentence(input);
+				chai.expect(returnedSentence).to.contain("Buzz");
+			});
+		});
+	});
 });

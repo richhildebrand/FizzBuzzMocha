@@ -43,5 +43,4 @@ describe("Acceptance Tests - Fizz Feature", function() {
 			});
 		});
 	});
-
 });

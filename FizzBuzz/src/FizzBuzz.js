@@ -8,8 +8,6 @@ var FizzBuzz = function() {
         var inputCharArray = inputToString.split('');
         var inputCharArrayContainsThree = (inputCharArray.indexOf("3") > -1);
 
-
-
         if (input % 3 === 0 || inputCharArrayContainsThree) {
             sentence = "Fizz";
         }
