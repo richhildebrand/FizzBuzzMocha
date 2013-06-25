@@ -29,10 +29,6 @@ describe("Acceptance Tests - Fizz Feature", function() {
 		});
 	});
 
-	//Throwing you under the bus here.
-	//In your refactor step I think we will want to add at least one class.
-	//Which also means you get to add the first failing unit test for your red.
-	//Woooo!
 	describe("Given a number that contains a three, getSentence", function() {
 		it("should return Fizz", function() {
 			var numbersNotDivisibleByThree = [3, 13, 30, 43, 310, 1030];
