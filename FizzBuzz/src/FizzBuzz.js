@@ -18,24 +18,33 @@ var FizzBuzz = function() {
         }
     };
 
-
-    var getSentence = function (input) {
-    	var sentence = "";
-        var inputToString = input.toString();
-        var inputCharArray = inputToString.split('');
-        var inputCharArrayContainsThree = (inputCharArray.indexOf("3") > -1);
+    var StringInspector = function(input) {
+        
+        var containsThree = function(input) {
+            return (input.toString().indexOf("3") != -1);
+        }
 
         var containsFive = function(input) {
             return (input.toString().indexOf("5") != -1);
         }
 
+        return {
+            containsThree : containsThree,
+            containsFive : containsFive
+        }
+    };
+
+    var getSentence = function (input) {
+    	var sentence = "";
+
         var calculator = new Calculator();
+        var stringInspector = new StringInspector();
 
 
-        if ( calculator.isDivisibleByThree(input) || inputCharArrayContainsThree) {
+        if ( calculator.isDivisibleByThree(input) || stringInspector.containsThree(input)) {
             sentence = "Fizz";
         }
-        if ( calculator.isDivisibleByFive(input) || containsFive(input)) {
+        if ( calculator.isDivisibleByFive(input) || stringInspector.containsFive(input)) {
             sentence += "Buzz";
         }
         return (sentence) ? sentence : input.toString();
@@ -43,6 +52,7 @@ var FizzBuzz = function() {
 
 	return {
 		getSentence : getSentence,
-        Calculator : Calculator
+        Calculator : Calculator,
+        StringInspector : StringInspector
 	}
 }
