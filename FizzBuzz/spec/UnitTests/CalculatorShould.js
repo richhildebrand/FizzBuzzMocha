@@ -15,8 +15,7 @@ describe("Unit Test - Calculator", function() {
 		it("should return true", function() {
 			var calculator = new FizzBuzz().Calculator();
 
-			//just to bring you here :)
-			var numbersDivisibleByThree = [7 ,6, 9, 15, 18, 30, 99]
+			var numbersDivisibleByThree = [3 ,6, 9, 15, 18, 30, 99]
 			numbersDivisibleByThree.forEach(function(input) {
 				var result = calculator.isDivisibleByThree(input);
 				chai.expect(result).to.to.be.true;
