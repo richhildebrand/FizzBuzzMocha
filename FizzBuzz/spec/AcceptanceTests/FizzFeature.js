@@ -3,6 +3,8 @@
 describe("Acceptance Tests - Fizz Feature", function() {
     var _fizzBuzz;
 
+    //I can't figure out how to get the mocks to start working!! I left them out if you want to try.
+    //I can figure it out tomorrow though if you'd like! Sorry again about this weekend and my slow check-ins.
     before(function(){
 	    _fizzBuzz = new FizzBuzz();
     });
