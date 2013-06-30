@@ -13,7 +13,7 @@ describe("Unit Test - Calculator", function() {
 	//inserting the calculator, but we want to get on to mocking!
 	describe("Given a number divisible by three, is divisibleByThree", function() {
 		it("should return true", function() {
-			var calculator = new FizzBuzz().Calculator();
+			var calculator = new FizzBuzz().Calculator;
 
 			var numbersDivisibleByThree = [3 ,6, 9, 15, 18, 30, 99]
 			numbersDivisibleByThree.forEach(function(input) {
@@ -25,7 +25,7 @@ describe("Unit Test - Calculator", function() {
 
 	describe("Given a number not divisible by three, is divisibleByThree", function() {
 		it("should not return true", function() {
-			var calculator = new FizzBuzz().Calculator();
+			var calculator = new FizzBuzz().Calculator;
 			var numbersNotDivisibleByThree = [7 , 5, 11, 13]
 
 			numbersNotDivisibleByThree.forEach(function(input) {
@@ -37,7 +37,7 @@ describe("Unit Test - Calculator", function() {
 
 	describe("Given a number not divisible by five, is divisibleByFive", function() {
 		it("should not return true", function() {
-			var calculator = new FizzBuzz().Calculator();
+			var calculator = new FizzBuzz().Calculator;
 			var numbersNotDivisibleByFive = [3 , 7, 11, 18]
 
 			numbersNotDivisibleByFive.forEach(function(input) {
@@ -49,7 +49,7 @@ describe("Unit Test - Calculator", function() {
 
 	describe("Given a number divisible by five, is divisibleByFive", function() {
 		it("should return true", function() {
-			var calculator = new FizzBuzz().Calculator();
+			var calculator = new FizzBuzz().Calculator;
 			var numbersDivisibleByFive = [5 , 10, 15, 60]
 
 			numbersDivisibleByFive.forEach(function(input) {

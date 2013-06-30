@@ -16,7 +16,7 @@ var FizzBuzz = function() {
             isDivisibleByThree: isDivisibleByThree,
             isDivisibleByFive : isDivisibleByFive
         }
-    };
+    }();
 
     var StringInspector = function(input) {
         
@@ -32,19 +32,15 @@ var FizzBuzz = function() {
             containsThree : containsThree,
             containsFive : containsFive
         }
-    };
+    }();
 
     var getSentence = function (input) {
     	var sentence = "";
 
-        var calculator = new Calculator();
-        var stringInspector = new StringInspector();
-
-
-        if ( calculator.isDivisibleByThree(input) || stringInspector.containsThree(input)) {
+        if ( this.Calculator.isDivisibleByThree(input) || this.StringInspector.containsThree(input)) {
             sentence = "Fizz";
         }
-        if ( calculator.isDivisibleByFive(input) || stringInspector.containsFive(input)) {
+        if ( this.Calculator.isDivisibleByFive(input) || this.StringInspector.containsFive(input)) {
             sentence += "Buzz";
         }
         return (sentence) ? sentence : input.toString();
